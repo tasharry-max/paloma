@@ -6,21 +6,18 @@ const Menu = styled(motion.nav)`
   display: flex;
   flex-direction: column;
   text-align: left;
-  position: absolute;
-  bottom: 0;
+  position: fixed;
+  bottom: 1%;
   left: 40%;
   font-family: 'Anton', sans-serif;
   font-weight: 400;
-  font-size: 6.5rem;
+  font-size: 5.5rem;
+  line-height: 1;
   transform: rotate(-90deg);
   transform-origin: right;
   text-transform: uppercase;
-/* 
-  @media ${device.mobileM}{
-    transform: rotate(0deg);
-    font-size: 3rem;
-    text-align: right;
-  } */
+  max-height: 100vh;
+  max-width: 100vw;
 `
 
 const MenuItem = styled(motion.a)`
@@ -28,7 +25,7 @@ const MenuItem = styled(motion.a)`
     text-decoration: none;
 
     margin-bottom: 0.5rem;
-    line-height: 1;
+
     letter-spacing: 5px;
     opacity: 0.7;
     &:hover {
