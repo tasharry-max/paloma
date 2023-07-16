@@ -7,11 +7,11 @@ const Menu = styled(motion.nav)`
   flex-direction: column;
   text-align: left;
   position: fixed;
-  bottom: 1%;
+  bottom: 0;
   left: 40%;
   font-family: 'Anton', sans-serif;
   font-weight: 400;
-  font-size: 5.5rem;
+  font-size: 5rem;
   line-height: 1;
   transform: rotate(-90deg);
   transform-origin: right;
