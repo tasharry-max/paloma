@@ -16,7 +16,7 @@ export const BackgroundImage = styled.div `
 export const Logo = styled(motion.img)`
     height: auto;
     max-height: 90vh;
-    top: 3%;
+    top: 5%;
     left: 5%;
     position: absolute;
     @media ${device.laptopS} {
