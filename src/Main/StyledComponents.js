@@ -1,7 +1,7 @@
+import {device} from '../utils';
+import {motion} from "framer-motion";
 import styled from 'styled-components'
 import mainBg from '../img/main_bg.jpg'
-import {motion} from "framer-motion";
-import { device } from '../utils';
 
 export const BackgroundImage = styled.div `
     background-image: url(${mainBg});
@@ -16,17 +16,29 @@ export const BackgroundImage = styled.div `
 export const Logo = styled(motion.img)`
     height: auto;
     max-height: 94vh;
-    top: 3%;
+    top: 5%;
     left: 5%;
     position: absolute;
+    @media ${device.laptopS} {
+      max-height: 75vh;
+      top: 12%;
+  }
+    @media ${device.tablet} {
+      max-height: 70vh;
+      top: 15%;
+  }
+  @media ${device.mobile} {
+      max-height: 35vh;
+      top: 30%;
+  }
 `
 
 export const Menu = styled(motion.nav)`
   display: flex;
   flex-direction: column;
   text-align: left;
-  position: fixed;
-  bottom: 3%;
+  position: absolute;
+  bottom: 5%;
   left: 35%;
   font-family: 'Anton', sans-serif;
   font-weight: 400;
@@ -37,25 +49,29 @@ export const Menu = styled(motion.nav)`
   text-transform: uppercase;
   max-height: 100vh;
   max-width: 100vw;
-  @media ${device.mobile} {
-    font-size: 3rem;
-    transform: rotate(0deg);
-    text-align: right;
-  }
-  @media ${device.tablet} {
-    font-size: 4rem;
-    transform: rotate(0deg);
-    text-align: right;
-  }
-  @media ${device.laptopS} {
-    font-size: 4.5rem;
+  @media ${device.desktop} {
+    font-size: 6rem;
   }
   @media ${device.laptop} {
     font-size: 5rem;
   }
-  @media ${device.desktop} {
-    font-size: 6rem;
-
+  @media ${device.laptopS} {
+    font-size: 4.5rem;
+    left: 30%;
+   
+  }
+  @media ${device.tablet} {
+    font-size: 3.5rem;
+    transform: rotate(0deg);
+    text-align: right;
+    right: 2%;
+    top: 10%;
+  }
+  @media ${device.mobile} {
+    font-size: 2.5rem;
+    top:10%;
+    transform: rotate(0deg);
+    text-align: right;
   }
 `
 

@@ -1,6 +1,5 @@
 import {MenuItem, Menu} from "./StyledComponents"
 
-
 export default function Navigation() {
     return (
         <Menu>
