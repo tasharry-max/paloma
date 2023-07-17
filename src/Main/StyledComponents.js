@@ -38,16 +38,24 @@ export const Menu = styled(motion.nav)`
   max-height: 100vh;
   max-width: 100vw;
   @media ${device.mobile} {
-
+    font-size: 3rem;
+    transform: rotate(0deg);
+    text-align: right;
   }
   @media ${device.tablet} {
+    font-size: 4rem;
+    transform: rotate(0deg);
+    text-align: right;
+  }
+  @media ${device.laptopS} {
     font-size: 4.5rem;
   }
   @media ${device.laptop} {
-    font-size: 5.5rem;
+    font-size: 5rem;
   }
   @media ${device.desktop} {
     font-size: 6rem;
+
   }
 `
 

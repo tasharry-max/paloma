@@ -1,4 +1,4 @@
-import {MenuItem, Menu} from "./Styled"
+import {MenuItem, Menu} from "./StyledComponents"
 
 
 export default function Navigation() {

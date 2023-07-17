@@ -1,6 +1,6 @@
 import logo from '../img/logo.svg'
 import Navigation from './Navigation'
-import { BackgroundImage, Logo } from './Styled';
+import { BackgroundImage, Logo } from './StyledComponents';
 
 export default function Main() {
     return (
