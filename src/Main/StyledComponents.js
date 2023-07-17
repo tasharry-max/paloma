@@ -38,7 +38,7 @@ export const Menu = styled(motion.nav)`
   flex-direction: column;
   text-align: left;
   position: absolute;
-  bottom: 5%;
+  bottom: 7%;
   left: 35%;
   font-family: 'Anton', sans-serif;
   font-weight: 400;
@@ -82,7 +82,7 @@ export const MenuItem = styled(motion.a)`
     letter-spacing: 5px;
     opacity: 0.7;
     position: relative;
-	text-decoration: none;
+	  text-decoration: none;
     &::before{
         content: '';
         position: absolute;
