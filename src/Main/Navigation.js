@@ -23,25 +23,38 @@ const Menu = styled(motion.nav)`
 const MenuItem = styled(motion.a)`
     color: white;
     text-decoration: none;
-
     margin-bottom: 0.5rem;
-
     letter-spacing: 5px;
     opacity: 0.7;
-    &:hover {
-        opacity: 1;
-        scale: 1.1;
-        text-shadow: 0 0 50px #999999;
+    position: relative;
+	text-decoration: none;
+    &::before{
+        content: '';
+        position: absolute;
+        left: 0; bottom: -5px;
+        width: 0;
+        height: 1.5px;
+        background-color: white;
+        transition: width 1s;
+        &:hover{
+            width: 100%;
+        }
     }
+    &:hover {
+        width: 100%;
+        opacity: 1;
+        scale: 1.02;
+        &::before{
+            width: 100%; 
+        }
+    }
+
 `
-
-
-
 
 export default function Navigation() {
     return (
         <Menu>
-            <MenuItem  href="#" alt="hear">Hear</MenuItem>
+            <MenuItem href="#" alt="hear" class="underline">Hear</MenuItem>
             <MenuItem href="#" alt="latest">Latest</MenuItem>
             <MenuItem href="#" alt="tour">Tour</MenuItem>
             <MenuItem href="#" alt="see">See</MenuItem>
