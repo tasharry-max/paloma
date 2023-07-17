@@ -1,32 +1,15 @@
-import styled from 'styled-components'
-import mainBg from '../img/main_bg.jpg'
 import logo from '../img/logo.svg'
 import Navigation from './Navigation'
-
-const BackgroundImage = styled.div `
-    background-image: url(${mainBg});
-    background-position: center top;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100vh;
-    width: 100vw;
-    position: relative;
-`
-
-const Logo = styled.img`
-    /* display: flex; */
-    height: auto;
-    max-height: 94vh;
-    top: 3%;
-    left: 5%;
-    position: absolute;
-`
+import { BackgroundImage, Logo } from './Styled';
 
 export default function Main() {
     return (
         <>
             <BackgroundImage/>
-            <Logo src={logo}/>
+            <Logo src={logo} initial={{ opacity: 0.7 }}
+                animate={{ opacity: 1, scale: 1 }}  
+                transition={{ duration: 1 }} 
+                whileHover={{ scale: 1.05 }}/>
             <Navigation/>
         </>
     )
