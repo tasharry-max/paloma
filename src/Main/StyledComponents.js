@@ -15,7 +15,7 @@ export const BackgroundImage = styled.div `
 
 export const Logo = styled(motion.img)`
     height: auto;
-    max-height: 90vh;
+    max-height: 90%;
     top: 5%;
     left: 5%;
     position: absolute;
@@ -42,13 +42,16 @@ export const Menu = styled(motion.nav)`
   left: 35%;
   font-family: 'Anton', sans-serif;
   font-weight: 400;
-  font-size: 6rem;
+  font-size: 8rem;
   line-height: 1;
   transform: rotate(-90deg);
   transform-origin: right;
   text-transform: uppercase;
   max-height: 100vh;
   max-width: 100vw;
+  @media ${device.desktop} and (max-height: 800px) {
+    bottom: 5%;
+  }
   @media ${device.desktop} {
     font-size: 6rem;
   }
